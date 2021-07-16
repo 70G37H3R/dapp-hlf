@@ -108,7 +108,7 @@ echo
 echo "# ---------------------------------------------------------------------------"
 echo "# Instantiating chaincode: A=100,B=200"
 echo "# ---------------------------------------------------------------------------"
-docker exec "$CLI_NAME" peer chaincode instantiate -o "$ORDERER_NAME":7050 -C "$CHANNEL_NAME" -n "$CHAINCODE_NAME" "$CHAINCODE_SRC" -v $CHAINCODE_VERSION  -c '{"Args":["init","a", "100", "b","200"]}' -P "OR('Org1MSP.member', 'Org2MSP.member')" --tls --cafile $ORDERER_CA_LOCATION
+docker exec "$CLI_NAME" peer chaincode instantiate -o "$ORDERER_NAME":7050 -C "$CHANNEL_NAME" -n "$CHAINCODE_NAME" "$CHAINCODE_SRC" -v $CHAINCODE_VERSION  -c '{"Args":["InitLedger"]}' -P "AND ('Org1MSP.member', 'Org2MSP.member')" --tls --cafile $ORDERER_CA_LOCATION
 sleep 10 
 
 echo 
@@ -122,11 +122,11 @@ echo
 echo "# ---------------------------------------------------------------------------"
 echo "# Invoking chaincode : Move 10 from A to B"
 echo "# ---------------------------------------------------------------------------"
-docker exec "$CLI_NAME" peer chaincode invoke -o "$ORDERER_NAME":7050 --tls --cafile $ORDERER_CA_LOCATION -C $CHANNEL_NAME -n $CHAINCODE_NAME -c '{"Args":["move","a","b","10"]}'
+docker exec "$CLI_NAME" peer chaincode invoke -o "$ORDERER_NAME":7050 --tls --cafile $ORDERER_CA_LOCATION -C $CHANNEL_NAME -n $CHAINCODE_NAME -c '{"Args":["CreateCar","CAR11","mazda","626","White","Korea"]}'
 sleep 5
 
 echo 
 echo "# ---------------------------------------------------------------------------"
 echo "# Query chaincode: Query A"
 echo "# ---------------------------------------------------------------------------"
-docker exec "$CLI_NAME" peer chaincode query -o "$ORDERER_NAME":7050 --tls --cafile $ORDERER_CA_LOCATION -C $CHANNEL_NAME -n $CHAINCODE_NAME -c '{"Args":["query","a"]}'
+docker exec "$CLI_NAME" peer chaincode query -o "$ORDERER_NAME":7050 --tls --cafile $ORDERER_CA_LOCATION -C $CHANNEL_NAME -n $CHAINCODE_NAME -c '{"Args":["QueryCar","CAR1"]}'
