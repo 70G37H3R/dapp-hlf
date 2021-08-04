@@ -108,7 +108,7 @@ echo
 echo "# ---------------------------------------------------------------------------"
 echo "# Instantiating chaincode: InitLedger"
 echo "# ---------------------------------------------------------------------------"
-docker exec "$CLI_NAME" peer chaincode instantiate -o "$ORDERER_NAME":7050 -C "$CHANNEL_NAME" -n "$CHAINCODE_NAME" "$CHAINCODE_SRC" -v $CHAINCODE_VERSION  -c '{"Args":[""]}' -P "OR ('Org1MSP.member','Org2MSP.member')" --tls --cafile $ORDERER_CA_LOCATION
+docker exec "$CLI_NAME" peer chaincode instantiate -o "$ORDERER_NAME":7050 -C "$CHANNEL_NAME" -n "$CHAINCODE_NAME" "$CHAINCODE_SRC" -v $CHAINCODE_VERSION  -c '{"Args":["initLedger"]}' -P "OR ('Org1MSP.member','Org2MSP.member')" --tls --cafile $ORDERER_CA_LOCATION
 sleep 10 
 
 echo 
@@ -123,4 +123,4 @@ echo
 echo "# ---------------------------------------------------------------------------"
 echo "# Query chaincode: Query ALL CARS"
 echo "# ---------------------------------------------------------------------------"
-docker exec "$CLI_NAME" peer chaincode query -o "$ORDERER_NAME":7050 --tls --cafile $ORDERER_CA_LOCATION -C $CHANNEL_NAME -n $CHAINCODE_NAME -c '{"Args":["getHistory"]}'
+docker exec "$CLI_NAME" peer chaincode query -o "$ORDERER_NAME":7050 --tls --cafile $ORDERER_CA_LOCATION -C $CHANNEL_NAME -n $CHAINCODE_NAME -c '{"Args":["createCar","CAR11","mazda","626", "White", "Horea"]}'
