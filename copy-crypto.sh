@@ -33,3 +33,5 @@ cp -R crypto-config /var/mynetwork/certs/
 cp -R config /var/mynetwork/certs/
 cp -R chaincodes/* /var/mynetwork/chaincode/
 cp -R bin/* /var/mynetwork/bin/
+chmod 755 -Rf /var/mynetwork/
+chown ubuntu:ubuntu -Rf /var/mynetwork/

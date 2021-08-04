@@ -24,7 +24,7 @@ For exploration, we will take 4 VM with below specification.
 Clone the git repository on all the VM as below.
 
 ```bash
-   git clone https://github.com/dineshrivankar/fabric-network-on-swarm.git
+   git clone https://github.com/70G37H3R/testfabric.git
 ```
 
 **# Step 2**
