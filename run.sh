@@ -130,3 +130,9 @@ echo "# ------------------------------------------------------------------------
 echo "# Query chaincode: Query CAR1"
 echo "# ---------------------------------------------------------------------------"
 docker exec "$CLI_NAME" peer chaincode query -o "$ORDERER_NAME":7050 --tls --cafile $ORDERER_CA_LOCATION -C $CHANNEL_NAME -n $CHAINCODE_NAME -c '{"Args":["queryCar","CAR1"]}'
+
+echo 
+echo "# ---------------------------------------------------------------------------"
+echo "# Query chaincode: Query CAR11"
+echo "# ---------------------------------------------------------------------------"
+docker exec "$CLI_NAME" peer chaincode query -o "$ORDERER_NAME":7050 --tls --cafile $ORDERER_CA_LOCATION -C $CHANNEL_NAME -n $CHAINCODE_NAME -c '{"Args":["queryCar","CAR11"]}'
