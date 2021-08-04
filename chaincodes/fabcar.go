@@ -33,7 +33,7 @@ type QueryResult struct {
 }
 
 // InitLedger adds a base set of cars to the ledger
-func (s *SmartContract) InitLedger(ctx contractapi.TransactionContextInterface) error {
+func (s *SmartContract) initLedger(ctx contractapi.TransactionContextInterface) error {
 	cars := []Car{
 		Car{Make: "Toyota", Model: "Prius", Colour: "blue", Owner: "Tomoko"},
 		Car{Make: "Ford", Model: "Mustang", Colour: "red", Owner: "Brad"},
@@ -60,7 +60,7 @@ func (s *SmartContract) InitLedger(ctx contractapi.TransactionContextInterface) 
 }
 
 // CreateCar adds a new car to the world state with given details
-func (s *SmartContract) CreateCar(ctx contractapi.TransactionContextInterface, carNumber string, make string, model string, colour string, owner string) error {
+func (s *SmartContract) createCar(ctx contractapi.TransactionContextInterface, carNumber string, make string, model string, colour string, owner string) error {
 	car := Car{
 		Make:   make,
 		Model:  model,
@@ -74,7 +74,7 @@ func (s *SmartContract) CreateCar(ctx contractapi.TransactionContextInterface, c
 }
 
 // QueryCar returns the car stored in the world state with given id
-func (s *SmartContract) QueryCar(ctx contractapi.TransactionContextInterface, carNumber string) (*Car, error) {
+func (s *SmartContract) queryCar(ctx contractapi.TransactionContextInterface, carNumber string) (*Car, error) {
 	carAsBytes, err := ctx.GetStub().GetState(carNumber)
 
 	if err != nil {
@@ -92,7 +92,7 @@ func (s *SmartContract) QueryCar(ctx contractapi.TransactionContextInterface, ca
 }
 
 // QueryAllCars returns all cars found in world state
-func (s *SmartContract) QueryAllCars(ctx contractapi.TransactionContextInterface) ([]QueryResult, error) {
+func (s *SmartContract) queryAllCars(ctx contractapi.TransactionContextInterface) ([]QueryResult, error) {
 	startKey := ""
 	endKey := ""
 
@@ -123,7 +123,7 @@ func (s *SmartContract) QueryAllCars(ctx contractapi.TransactionContextInterface
 }
 
 // ChangeCarOwner updates the owner field of car with given id in world state
-func (s *SmartContract) ChangeCarOwner(ctx contractapi.TransactionContextInterface, carNumber string, newOwner string) error {
+func (s *SmartContract) changeCarOwner(ctx contractapi.TransactionContextInterface, carNumber string, newOwner string) error {
 	car, err := s.QueryCar(ctx, carNumber)
 
 	if err != nil {
