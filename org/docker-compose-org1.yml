@@ -4,6 +4,34 @@ networks:
         external:
             name: myNetwork
 services:
+    ca_org1:
+        deploy:
+            replicas: 1
+            restart_policy: 
+                condition: on-failure
+                delay: 5s
+                max_attempts: 3
+            placement: 
+                constraints: 
+                    - node.hostname == ca.org1.example.com
+        image: hyperledger/fabric-ca:latest
+        hostname: ca.org1.example.com
+        environment:
+            - FABRIC_CA_SERVER_TLS_ENABLED=true
+            - FABRIC_CA_HOME=/var/hyperledger/fabric-ca-server
+            - FABRIC_CA_SERVER_CA_NAME=ca.org1.example.com
+            - FABRIC_CA_SERVER_CA_CERTFILE=/var/hyperledger/fabric-ca-server-config/ca.org1.example.com-cert.pem
+            - FABRIC_CA_SERVER_CA_KEYFILE=/var/hyperledger/fabric-ca-server-config/a21a62d01d9d1324dc697f70a9a438a976078f5bb85cf42c19c49b6979972bbd_sk
+        ports:
+            - 7054:7054
+        command: sh -c 'fabric-ca-server start -b admin:adminpw'
+        volumes:
+            - /var/mynetwork/certs/crypto-config/peerOrganizations/org1.example.com/ca/:/var/hyperledger/fabric-ca-server-config
+        networks:
+            myNetwork: 
+                aliases:
+                    - ca.org1.example.com
+            
     peer0_org1:
         deploy:
             replicas: 1
