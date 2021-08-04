@@ -124,7 +124,7 @@ func (s *SmartContract) queryAllCars(ctx contractapi.TransactionContextInterface
 
 // ChangeCarOwner updates the owner field of car with given id in world state
 func (s *SmartContract) changeCarOwner(ctx contractapi.TransactionContextInterface, carNumber string, newOwner string) error {
-	car, err := s.QueryCar(ctx, carNumber)
+	car, err := s.queryCar(ctx, carNumber)
 
 	if err != nil {
 		return err
