@@ -1,4 +1,5 @@
 # 4host-swarm
 Deploy multi-host First Network (using Fabric v2.2)
+curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9
+docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.RunningFor}}\t{{.Status}}"
 
-Source of article: https://medium.com/@kctheservant/multi-host-deployment-for-first-network-hyperledger-fabric-v2-273b794ff3d
