@@ -77,7 +77,6 @@ services:
         working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
         ports:
             - 7051:7051
-            - 7053:7053
         networks:
             myNetwork: 
                 aliases:
@@ -128,7 +127,6 @@ services:
         working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
         ports:
             - 8051:8051
-            - 8053:8053
         networks:
             myNetwork: 
                 aliases: 
