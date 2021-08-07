@@ -2,8 +2,8 @@
 
 echo 'printing keystore for Org1'
 
-ORG_1_KEYSTORE=$(ls ./crypto-config/peerOrganizations/org1.example.com/users/Admin\@org1.example.com/msp/keystore/)
-ORG_2_KEYSTORE=$(ls ./crypto-config/peerOrganizations/org2.example.com/users/Admin\@org2.example.com/msp/keystore/)
+ORG_1_KEYSTORE=$(ls ../../crypto-config/peerOrganizations/org1.example.com/users/Admin\@org1.example.com/msp/keystore/)
+ORG_2_KEYSTORE=$(ls ../../crypto-config/peerOrganizations/org2.example.com/users/Admin\@org2.example.com/msp/keystore/)
 
 ORG_1_PATH_TO_KEYSTORE="Admin@org1.example.com/msp/keystore/"
 ORG_2_PATH_TO_KEYSTORE="Admin@org2.example.com/msp/keystore/"
