@@ -24,11 +24,11 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  createCar(color: string, make: string, model: string, owner: string) {
+  createCar(colour: string, make: string, model: string, owner: string) {
     return this.http.post(baseURL + createCarURL, ({
       'make': make,
       'model': model,
-      'color': color,
+      'colour': colour,
       'owner': owner
     }), {headers}).toPromise().then((result) => { this.queryAllCars(); });
 
