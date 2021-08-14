@@ -2,8 +2,6 @@
 
 `curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9`
 
-`docker network create --attachable --driver overlay first-network`
-
 `docker run -itd --name mybusybox --network first-network busybox`
 
 #Display container names in required format
