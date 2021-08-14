@@ -2,6 +2,8 @@
 
 `curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9`
 
+`docker network create --attachable --driver overlay first-network`
+
 #Step2: Generate crypto materials:
 
 `../bin/cryptogen generate --config=./crypto-config.yaml`
