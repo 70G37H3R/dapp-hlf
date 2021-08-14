@@ -17,6 +17,6 @@ export class CreateCarFormComponent implements OnInit {
 
   async onSubmit(data) {
     console.log(data);
-    return this.apiService.createCar(data.color, data.make, data.model, data.owner);
+    return this.apiService.createCar(data.colour, data.make, data.model, data.owner);
   }
 }
