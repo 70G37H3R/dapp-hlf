@@ -1,7 +1,7 @@
 
 'use strict';
 
-const { FileSystemWallet, Gateway } = require('fabric-network');
+const { Wallets, Gateway } = require('fabric-network');
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml')
