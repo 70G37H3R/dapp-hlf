@@ -3,6 +3,7 @@
 `curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9`
 
 #Step2: Generate crypto materials:
+
 `../bin/cryptogen generate --config=./crypto-config.yaml`
 
 `export FABRIC_CFG_PATH=$PWD`
