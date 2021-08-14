@@ -8,7 +8,7 @@ const FabricCAServices = require('fabric-ca-client');
 const { Wallets, Gateway } = require('fabric-network');
 const fs = require('fs');
 const path = require('path');
-const yaml = require('js-yaml')
+const yaml = require('js-yaml');
 
 const ccpPath = path.join(process.cwd(), '/connection.yaml');
 let ccpJSON = fs.readFileSync(ccpPath, 'utf8');
