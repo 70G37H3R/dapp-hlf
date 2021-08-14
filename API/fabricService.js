@@ -5,14 +5,15 @@
 'use strict';
 
 const FabricCAServices = require('fabric-ca-client');
-const { Wallets, Gateway, X509WalletMixin } = require('fabric-network');
+const { Wallets, Gateway } = require('fabric-network');
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml')
 
-const ccpPath = path.resolve(__dirname, 'connection.json');
+//const ccpPath = path.resolve(__dirname, 'connection.json');
+const ccpPath = path.join(process.cwd(), '/connection.yaml');
 const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
-const ccp = JSON.parse(ccpJSON);
+const ccp = yaml.safeLoad(ccpJSON);
 
 class fabricService{
 
