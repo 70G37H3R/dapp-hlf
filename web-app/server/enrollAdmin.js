@@ -54,7 +54,7 @@ async function main() {
             mspId: orgMSPID,
             type: 'X.509',
         };
-        await wallet.put(userName, x509Identity);
+        await wallet.put(userName, identity);
         console.log('msg: Successfully enrolled admin user ' + userName + ' and imported it into the wallet');
 
     } catch (error) {
