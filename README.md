@@ -1,7 +1,7 @@
-Deploy multi-host First Network (using Fabric v2.2 and Docker Swarm)
+#Step1: Deploy multi-host First Network (using Fabric v2.2 and Docker Swarm)
 curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9
 
-Generate crypto materials:
+#Step2: Generate crypto materials:
 
 ../bin/cryptogen generate --config=./crypto-config.yaml
 
@@ -17,6 +17,7 @@ mkdir channel-artifacts
 
 ../bin/configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID mychannel -asOrg Org2MSP
 
+#Display container names in required format
 
 docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.RunningFor}}"
 
