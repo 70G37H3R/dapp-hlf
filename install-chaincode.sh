@@ -1,4 +1,4 @@
-pushd ../chaincode/fabcar/go
+pushd chaincode/iot_chaincode
 go mod vendor
 popd
 
