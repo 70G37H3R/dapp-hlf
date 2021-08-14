@@ -4,6 +4,8 @@
 
 `docker network create --attachable --driver overlay first-network`
 
+`docker run -itd --name mybusybox --network first-network busybox`
+
 #Display container names in required format
 
 `docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.RunningFor}}"`
