@@ -8,7 +8,7 @@ const FabricCAServices = require('fabric-ca-client');
 const { Wallets } = require('fabric-network');
 const fs = require('fs');
 const path = require('path');
-const yaml = require('js-yaml')
+const yaml = require('js-yaml');
 
 // capture network variables from config.json
 const configPath = path.join(process.cwd(), 'config.json');
