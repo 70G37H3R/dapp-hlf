@@ -5,29 +5,31 @@
 'use strict';
 
 const FabricCAServices = require('fabric-ca-client');
-const { FileSystemWallet, Gateway, X509WalletMixin } = require('fabric-network');
+const { Wallets, Gateway } = require('fabric-network');
 const fs = require('fs');
 const path = require('path');
+const yaml = require('js-yaml')
 
-const ccpPath = path.resolve(__dirname, 'connection.json');
-const ccpJSON = fs.readFileSync(ccpPath, 'utf8');
-const ccp = JSON.parse(ccpJSON);
+const ccpPath = path.join(process.cwd(), '/connection.yaml');
+let ccpJSON = fs.readFileSync(ccpPath, 'utf8');
+let ccp = yaml.safeLoad(ccpJSON);
+
 
 class fabricService{
 
    async enrollAdmin(adminName, password) {
         try {
             // Create a new CA client for interacting with the CA.
-            const caURL = ccp.certificateAuthorities['caorg1'].url;
+            const caURL = ccp.certificateAuthorities['ca.org1.example.com'].url;
             const ca = new FabricCAServices(caURL);
     
             // Create a new file system based wallet for managing identities.
             const walletPath = path.join(process.cwd(), 'wallet');
-            const wallet = new FileSystemWallet(walletPath);
+            const wallet = await Wallets.newFileSystemWallet(walletPath);
             console.log(`Wallet path: ${walletPath}`);
     
             // Check to see if we've already enrolled the admin user.
-            const adminExists = await wallet.exists(adminName);
+            const adminExists = await wallet.get(adminName);
             if (adminExists) {
                 console.log('An identity for the admin user \"', adminName, '\" already exists in the wallet');
                 return;
@@ -35,8 +37,17 @@ class fabricService{
     
             // Enroll the admin user, and import the new identity into the wallet.
             const enrollment = await ca.enroll({ enrollmentID: adminName, enrollmentSecret: password });
-            const identity = X509WalletMixin.createIdentity('Org1MSP', enrollment.certificate, enrollment.key.toBytes());
-            wallet.import(adminName, identity);
+            //const identity = X509WalletMixin.createIdentity('Org1MSP', enrollment.certificate, enrollment.key.toBytes());
+            //wallet.import(adminName, identity);
+            const identity = {
+               credentials: {
+                  certificate: enrollment.certificate,
+                  privateKey: enrollment.key.toBytes(),
+               },
+                mspId: 'Org1MSP',
+                type: 'X.509',
+            };
+            await wallet.put(adminName, identity);
             console.log('Successfully enrolled admin user \"', adminName, '\" and imported it into the wallet');
             return identity;
         } catch (error) {
@@ -49,18 +60,18 @@ class fabricService{
         try {
             // Create a new file system based wallet for managing identities.
             const walletPath = path.join(process.cwd(), 'wallet');
-            const wallet = new FileSystemWallet(walletPath);
+            const wallet = await Wallets.newFileSystemWallet(walletPath);
             console.log(`Wallet path: ${walletPath}`);
     
             // Check to see if we've already enrolled the user.
-            const userExists = await wallet.exists(username);
+            const userExists = await wallet.get(username);
             if (userExists) {
                 console.log('An identity for the user \"', username, '\" already exists in the wallet');
                 return;
             }
     
             // Check to see if we've already enrolled the admin user.
-            const adminExists = await wallet.exists(adminName);
+            const adminExists = await wallet.get(adminName);
             if (!adminExists) {
                 console.log('An identity for the admin user \"', adminName, '\" does not exist in the wallet');
                 console.log('Run the enrollAdmin.js application before retrying');
@@ -78,8 +89,17 @@ class fabricService{
             // Register the user, enroll the user, and import the new identity into the wallet.
             const secret = await ca.register({ affiliation: 'org1.department1', enrollmentID: username, role: 'client' }, adminIdentity);
             const enrollment = await ca.enroll({ enrollmentID: username, enrollmentSecret: secret });
-            const userIdentity = X509WalletMixin.createIdentity('Org1MSP', enrollment.certificate, enrollment.key.toBytes());
-            wallet.import(username, userIdentity);
+            //const userIdentity = X509WalletMixin.createIdentity('Org1MSP', enrollment.certificate, enrollment.key.toBytes());
+            //wallet.import(username, userIdentity);
+            const userIdentity = {
+               credentials: {
+                  certificate: enrollment.certificate,
+                  privateKey: enrollment.key.toBytes(),
+               },
+                mspId: 'Org1MSP',
+                type: 'X.509',
+            };
+            await wallet.put(username, userIdentity);
             console.log('Successfully registered and enrolled admin user \"', username, '\" and imported it into the wallet');
             return userIdentity;
         } catch (error) {
@@ -92,11 +112,11 @@ class fabricService{
         try {
             // Create a new file system based wallet for managing identities.
             const walletPath = path.join(process.cwd(), 'wallet');
-            const wallet = new FileSystemWallet(walletPath);
+            const wallet = await Wallets.newFileSystemWallet(walletPath);
             console.log(`Wallet path: ${walletPath}`);
     
             // Check to see if we've already enrolled the user.
-            const userExists = await wallet.exists(username);
+            const userExists = await wallet.get(username);
             if (!userExists) {
                 console.log('An identity for the user \"', username, '\" does not exist in the wallet');
                 console.log('Run the registerUser.js application before retrying');
@@ -130,11 +150,11 @@ class fabricService{
         try {
             // Create a new file system based wallet for managing identities.
             const walletPath = path.join(process.cwd(), 'wallet');
-            const wallet = new FileSystemWallet(walletPath);
+            const wallet = await Wallets.newFileSystemWallet(walletPath);
             console.log(`Wallet path: ${walletPath}`);
     
             // Check to see if we've already enrolled the user.
-            const userExists = await wallet.exists(username);
+            const userExists = await wallet.get(username);
             if (!userExists) {
                 console.log('An identity for the user \"', username, '\" does not exist in the wallet');
                 console.log('Run the registerUser.js application before retrying');
@@ -169,11 +189,11 @@ class fabricService{
     
             // Create a new file system based wallet for managing identities.
             const walletPath = path.join(process.cwd(), 'wallet');
-            const wallet = new FileSystemWallet(walletPath);
+            const wallet = await Wallets.newFileSystemWallet(walletPath);
             console.log(`Wallet path: ${walletPath}`);
     
             // Check to see if we've already enrolled the user.
-            const userExists = await wallet.exists(username);
+            const userExists = await wallet.get(username);
             if (!userExists) {
                 console.log('An identity for the user \"', username, '\" does not exist in the wallet');
                 console.log('Run the registerUser.js application before retrying');
