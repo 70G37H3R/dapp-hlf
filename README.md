@@ -1,5 +1,5 @@
 # 4host-swarm
-Deploy multi-host First Network (using Fabric v2.2)
+Deploy multi-host First Network (using Fabric v2.2 and Docker Swarm)
 curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9
 
 generate the required material.
