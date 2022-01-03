@@ -6,13 +6,13 @@
 
 [The Raft Consensus Algorithm](https://raft.github.io/)
 
-## Deploying a Decentralized Application on HLF network with:
-
-[Angular.js](https://angularjs.org/)
-
 ## Smart contracts were placed under chaincode/ folder and were written with:
 
 [Golang](https://github.com/IBM/IBMDeveloper-recipes/blob/main/writing-hyperledger-fabric-chaincode-using-go-programming-language/index.md)
+
+## Deploying a Decentralized Application on HLF network with:
+
+[Angular.js](https://angularjs.org/)
 
 ## Displaying container names in required format
 
