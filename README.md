@@ -1,4 +1,4 @@
-## Deploying multi-host Hyperledger Fabric Network with:
+## Deploying multi-host Hyperledger Fabric network with:
 
 [Hyperledger Fabric v2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/whatsnew.html)
 
