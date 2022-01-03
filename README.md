@@ -10,6 +10,8 @@
 
 [Angular.js](https://angularjs.org/)
 
+## Smart contracts were placed under chaincode/ folder and were written in Golang
+
 ## Displaying container names in required format
 
 `docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.RunningFor}}"`
