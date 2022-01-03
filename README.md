@@ -1,6 +1,6 @@
 ## Deploying multi-host Hyperledger Fabric Network with:
 
-[Hyperledger Fabric 2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/whatsnew.html)
+[Hyperledger Fabric v2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/whatsnew.html)
 
 [Docker Swarm](https://docs.docker.com/engine/swarm/)
 
