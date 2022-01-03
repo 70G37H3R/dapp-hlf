@@ -4,6 +4,8 @@
 
 [Docker Swarm](https://docs.docker.com/engine/swarm/)
 
+[The Raft Consensus Algorithm](https://raft.github.io/)
+
 ## Displaying container names in required format
 
 `docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.RunningFor}}"`
