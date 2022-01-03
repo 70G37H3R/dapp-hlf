@@ -1,10 +1,12 @@
-## Building multi-host Hyperledger Fabric network & Deploying a Decentralized Application on it with:
+## Building multi-host Hyperledger Fabric network with:
 
 [Hyperledger Fabric v2.2](https://hyperledger-fabric.readthedocs.io/en/release-2.2/whatsnew.html)
 
 [Docker Swarm](https://docs.docker.com/engine/swarm/)
 
 [The Raft Consensus Algorithm](https://raft.github.io/)
+
+Deploying a Decentralized Application with:
 
 [Angular.js](https://angularjs.org/)
 
