@@ -6,6 +6,8 @@
 
 [The Raft Consensus Algorithm](https://raft.github.io/)
 
+[Angular.js](https://angularjs.org/)
+
 ## Displaying container names in required format
 
 `docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.RunningFor}}"`
