@@ -1,10 +1,10 @@
-## Deploy multi-host Hyperledger Fabric Network (using Fabric v2.2 and Docker Swarm)
+## Deploying multi-host Hyperledger Fabric Network (using Fabric v2.2 and Docker Swarm)
 
 `curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.2 1.4.9`
 
 `docker run -itd --name mybusybox --network first-network busybox`
 
-## Display container names in required format
+## Displaying container names in required format
 
 `docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.RunningFor}}"`
 
