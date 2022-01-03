@@ -10,7 +10,9 @@
 
 [Angular.js](https://angularjs.org/)
 
-## Smart contracts were placed under chaincode/ folder and were written in Golang
+## Smart contracts were placed under chaincode/ folder and were written with
+
+[Golang](https://github.com/IBM/IBMDeveloper-recipes/blob/main/writing-hyperledger-fabric-chaincode-using-go-programming-language/index.md)
 
 ## Displaying container names in required format
 
