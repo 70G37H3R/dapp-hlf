@@ -6,7 +6,7 @@
 
 [The Raft Consensus Algorithm](https://raft.github.io/)
 
-##Deploying a Decentralized Application with:
+## Deploying a Decentralized Application with:
 
 [Angular.js](https://angularjs.org/)
 
