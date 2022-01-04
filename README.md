@@ -14,7 +14,7 @@
 
 [Angular.js](https://angularjs.org/)
 
-[Hyperledger Fabric Client for Node.js](https://www.npmjs.com/package/fabric-network)
+[Hyperledger Fabric Client for Node.js](https://hyperledger.github.io/fabric-sdk-node/release-2.2/module-fabric-network.html)
 
 ## Displaying container names in required format
 
