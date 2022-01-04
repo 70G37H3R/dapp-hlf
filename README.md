@@ -13,6 +13,7 @@
 ## Deploying a Decentralized Application on HLF network with:
 
 [Angular.js](https://angularjs.org/)
+[Hyperledger Fabric Client for Node.js](https://www.npmjs.com/package/fabric-network)
 
 ## Displaying container names in required format
 
