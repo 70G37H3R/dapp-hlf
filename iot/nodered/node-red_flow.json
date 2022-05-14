@@ -1,0 +1,1617 @@
+[
+    {
+        "id": "cac464ba.946338",
+        "type": "tab",
+        "label": "Registration",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e61d7807.20aac8",
+        "type": "tab",
+        "label": "Dashboard",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8a5089a.03c5078",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "43ae93e4.3fd91c",
+        "type": "ui_tab",
+        "name": "Sensor History",
+        "icon": "fa-history",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "5721af64.a940a",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "43ae93e4.3fd91c",
+        "order": 1,
+        "disp": false,
+        "width": "20",
+        "collapse": false
+    },
+    {
+        "id": "2d59a220.05900e",
+        "type": "ui_tab",
+        "name": "Sensor Data",
+        "icon": "fa-thermometer-quarter",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "d347e8e2.369048",
+        "type": "ui_group",
+        "name": "Start / Stop",
+        "tab": "2d59a220.05900e",
+        "order": 1,
+        "disp": true,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4dd3faf7.5231c4",
+        "type": "ui_group",
+        "name": "Sensor Readings",
+        "tab": "2d59a220.05900e",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "1f3af4f4790909eb",
+        "type": "ui_group",
+        "name": "Sensor Readings 2",
+        "tab": "2d59a220.05900e",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "83af9307f26bf0ad",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "4d8a09475ac73ba9",
+        "order": 2,
+        "disp": false,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4d8a09475ac73ba9",
+        "type": "ui_tab",
+        "name": "Sensor History 2",
+        "icon": "fa-history",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "7f8789b9.253048",
+        "type": "http request",
+        "z": "cac464ba.946338",
+        "name": "Enroll Admin HTTP Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/enrollAdmin",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 540,
+        "y": 100,
+        "wires": [
+            [
+                "eeb423fe.c7207"
+            ]
+        ]
+    },
+    {
+        "id": "f20b8cdc.e002",
+        "type": "inject",
+        "z": "cac464ba.946338",
+        "name": "POST",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "5dd7185d.b222"
+            ]
+        ]
+    },
+    {
+        "id": "eeb423fe.c7207",
+        "type": "debug",
+        "z": "cac464ba.946338",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 770,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "132183c.1a40d7c",
+        "type": "http request",
+        "z": "cac464ba.946338",
+        "name": "Register User HTTP Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/registerUser",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 540,
+        "y": 200,
+        "wires": [
+            [
+                "1b18c390.d5f72c"
+            ]
+        ]
+    },
+    {
+        "id": "f38377bb.b0c6c8",
+        "type": "inject",
+        "z": "cac464ba.946338",
+        "name": "POST",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "57f3f30c.7b938c"
+            ]
+        ]
+    },
+    {
+        "id": "1b18c390.d5f72c",
+        "type": "debug",
+        "z": "cac464ba.946338",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 770,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6c18a509.9ab23c",
+        "type": "http request",
+        "z": "cac464ba.946338",
+        "name": "Register Sensor HTTP Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/registerSensor",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 550,
+        "y": 300,
+        "wires": [
+            [
+                "ef80848f.68ea48"
+            ]
+        ]
+    },
+    {
+        "id": "fd2b0988.6b8da8",
+        "type": "inject",
+        "z": "cac464ba.946338",
+        "name": "POST",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "cbcaabe9.f36e48"
+            ]
+        ]
+    },
+    {
+        "id": "ef80848f.68ea48",
+        "type": "debug",
+        "z": "cac464ba.946338",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 770,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "633bae1e.008508",
+        "type": "inject",
+        "z": "e61d7807.20aac8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "c58c5119.827ab"
+            ]
+        ]
+    },
+    {
+        "id": "c15ea1c5.969918",
+        "type": "function",
+        "z": "e61d7807.20aac8",
+        "name": "Generate Temperature Readings",
+        "func": "if( msg.payload === false ) {\n    return null;\n}\nmsg.payload = \"\" + Math.round(Math.random()*50) ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 160,
+        "wires": [
+            [
+                "5a6a66f1.d94"
+            ]
+        ]
+    },
+    {
+        "id": "dbc47c80.0aca78",
+        "type": "inject",
+        "z": "e61d7807.20aac8",
+        "name": "Instructions",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "Use this toggle switch to start / stop the generation of IoT temperature readings to be written to the Hyperledger Fabric blockchain.",
+        "payloadType": "str",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "2de29a96.96fa9e"
+            ]
+        ]
+    },
+    {
+        "id": "5a6a66f1.d94",
+        "type": "link out",
+        "z": "e61d7807.20aac8",
+        "name": "",
+        "links": [
+            "fc9c2af3.67052"
+        ],
+        "x": 975,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "fc9c2af3.67052",
+        "type": "link in",
+        "z": "e61d7807.20aac8",
+        "name": "",
+        "links": [
+            "5a6a66f1.d94"
+        ],
+        "x": 95,
+        "y": 280,
+        "wires": [
+            [
+                "d08893cd.a4efd8",
+                "30763357.5cb88c",
+                "77b4a2f.a8e2e5c"
+            ]
+        ]
+    },
+    {
+        "id": "c58c5119.827ab",
+        "type": "ui_switch",
+        "z": "e61d7807.20aac8",
+        "name": "",
+        "label": "Generate IoT readings",
+        "tooltip": "",
+        "group": "d347e8e2.369048",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 340,
+        "y": 160,
+        "wires": [
+            [
+                "b9d5af6d.c3728"
+            ]
+        ]
+    },
+    {
+        "id": "2de29a96.96fa9e",
+        "type": "ui_text",
+        "z": "e61d7807.20aac8",
+        "group": "d347e8e2.369048",
+        "order": 1,
+        "width": "10",
+        "height": "2",
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 290,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "30763357.5cb88c",
+        "type": "ui_gauge",
+        "z": "e61d7807.20aac8",
+        "name": "Gauge",
+        "group": "4dd3faf7.5231c4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 270,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d08893cd.a4efd8",
+        "type": "ui_chart",
+        "z": "e61d7807.20aac8",
+        "name": "Chart",
+        "group": "4dd3faf7.5231c4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Generator",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Querying Entropy",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "5",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 270,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb97c32a.39353",
+        "type": "comment",
+        "z": "e61d7807.20aac8",
+        "name": "If you can't connect an IoT sensor, get data from the random generator",
+        "info": "",
+        "x": 270,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "77b4a2f.a8e2e5c",
+        "type": "function",
+        "z": "e61d7807.20aac8",
+        "name": "Body / Headers",
+        "func": "var temp = msg.payload;\n\nvar date = new Date();\nvar options = { timeZone: 'Asia/Ho_Chi_Minh', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };\nvar time = date.toLocaleDateString('tr-TR', options);\n\n\nmsg.payload = {'username':'user1','channel':'mychannel', 'smartcontract':'mycc', 'args': {'sensorID':'sensor1', 'temp':temp,'time':time} };\nmsg.headers = {'content-type':'application/json'};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "c7870641.3974e"
+            ]
+        ]
+    },
+    {
+        "id": "b76fa7a7.50bf7",
+        "type": "debug",
+        "z": "e61d7807.20aac8",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 810,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c7870641.3974e",
+        "type": "http request",
+        "z": "e61d7807.20aac8",
+        "name": "Add Temperature HTTP Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/addTemp",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "b76fa7a7.50bf7",
+                "bbb8e6b6.242d38"
+            ]
+        ]
+    },
+    {
+        "id": "bbb8e6b6.242d38",
+        "type": "ui_toast",
+        "z": "e61d7807.20aac8",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "topic": "Success",
+        "name": "Notification",
+        "x": 830,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7c0ac50.df3b4bc",
+        "type": "http request",
+        "z": "e61d7807.20aac8",
+        "name": "Get History HTTP Request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/getHistory",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 540,
+        "y": 420,
+        "wires": [
+            [
+                "59a77b16.08c6dc",
+                "ea26e03a.c05d"
+            ]
+        ]
+    },
+    {
+        "id": "59a77b16.08c6dc",
+        "type": "debug",
+        "z": "e61d7807.20aac8",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 750,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6bcd4294.f37834",
+        "type": "ui_button",
+        "z": "e61d7807.20aac8",
+        "name": "",
+        "group": "5721af64.a940a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get History",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 110,
+        "y": 420,
+        "wires": [
+            [
+                "a79d0286.cd9288"
+            ]
+        ]
+    },
+    {
+        "id": "e1a0aa3b.ffe1c8",
+        "type": "comment",
+        "z": "e61d7807.20aac8",
+        "name": "Read history from the blockchain into a table",
+        "info": "",
+        "x": 610,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "ea26e03a.c05d",
+        "type": "function",
+        "z": "e61d7807.20aac8",
+        "name": "Format Table",
+        "func": "if( msg.payload.length === 0 ) {\n    return;\n}\n\nvar TxChain = [];\nfor( i=0; i < msg.payload.length; i++ ) {\n    var TransactionRecord = { \"TxId\":msg.payload[i].TxId, \n                              \"sensorID\":msg.payload[i].Value.sensorID,\n                              \"temp\":msg.payload[i].Value.temp,\n                              \"time\":msg.payload[i].Value.time\n                            };\n    TxChain.push( TransactionRecord );    \n}\nmsg.payload = TxChain;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 400,
+        "wires": [
+            [
+                "51182072.afefb8"
+            ]
+        ]
+    },
+    {
+        "id": "5dd7185d.b222",
+        "type": "change",
+        "z": "cac464ba.946338",
+        "name": "Body / Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"adminName\": \"admin\", \"password\":\"adminpw\"}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"content-type\":\"application/json\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 100,
+        "wires": [
+            [
+                "7f8789b9.253048"
+            ]
+        ]
+    },
+    {
+        "id": "57f3f30c.7b938c",
+        "type": "change",
+        "z": "cac464ba.946338",
+        "name": "Body / Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"adminName\": \"admin\", \"username\":\"user1\"}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"content-type\":\"application/json\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "132183c.1a40d7c"
+            ]
+        ]
+    },
+    {
+        "id": "cbcaabe9.f36e48",
+        "type": "change",
+        "z": "cac464ba.946338",
+        "name": "Body / Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"username\": \"user1\", \"channel\":\"mychannel\", \"smartcontract\":\"mycc\", \"args\":{\"sensorID\": \"sensor1\"} }",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"content-type\":\"application/json\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 300,
+        "wires": [
+            [
+                "6c18a509.9ab23c"
+            ]
+        ]
+    },
+    {
+        "id": "a79d0286.cd9288",
+        "type": "change",
+        "z": "e61d7807.20aac8",
+        "name": "Body / Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"username\": \"user1\", \"channel\":\"mychannel\", \"smartcontract\":\"mycc\", \"args\":{\"sensorID\": \"sensor1\"} }",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"content-type\":\"application/json\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 420,
+        "wires": [
+            [
+                "7c0ac50.df3b4bc"
+            ]
+        ]
+    },
+    {
+        "id": "b9d5af6d.c3728",
+        "type": "delay",
+        "z": "e61d7807.20aac8",
+        "name": "Rate Limit",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 540,
+        "y": 160,
+        "wires": [
+            [
+                "c15ea1c5.969918"
+            ]
+        ]
+    },
+    {
+        "id": "51182072.afefb8",
+        "type": "ui_table",
+        "z": "e61d7807.20aac8",
+        "group": "5721af64.a940a",
+        "name": "",
+        "order": 2,
+        "width": "20",
+        "height": "14",
+        "columns": [
+            {
+                "field": "TxId",
+                "title": "Transaction ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "sensorID",
+                "title": "Sensor ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "time",
+                "title": "Time",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "temp",
+                "title": "Temperature",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 930,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "25b09ecfb29b15e6",
+        "type": "http request",
+        "z": "cac464ba.946338",
+        "name": "Register User HTTP Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/registerUser",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 540,
+        "y": 400,
+        "wires": [
+            [
+                "bf0c3e3f55de6ceb"
+            ]
+        ]
+    },
+    {
+        "id": "8a912dc659162c7f",
+        "type": "inject",
+        "z": "cac464ba.946338",
+        "name": "POST",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 400,
+        "wires": [
+            [
+                "66f5e04569816369"
+            ]
+        ]
+    },
+    {
+        "id": "ea8e7d7f1eb49cac",
+        "type": "http request",
+        "z": "cac464ba.946338",
+        "name": "Register Sensor HTTP Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/registerSensor",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 550,
+        "y": 500,
+        "wires": [
+            [
+                "ec2610afc4fa964a"
+            ]
+        ]
+    },
+    {
+        "id": "cc5d38f105f97d5e",
+        "type": "inject",
+        "z": "cac464ba.946338",
+        "name": "POST",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 500,
+        "wires": [
+            [
+                "683bf26323581fab"
+            ]
+        ]
+    },
+    {
+        "id": "66f5e04569816369",
+        "type": "change",
+        "z": "cac464ba.946338",
+        "name": "Body / Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"adminName\": \"admin\", \"username\":\"user2\"}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"content-type\":\"application/json\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 400,
+        "wires": [
+            [
+                "25b09ecfb29b15e6"
+            ]
+        ]
+    },
+    {
+        "id": "683bf26323581fab",
+        "type": "change",
+        "z": "cac464ba.946338",
+        "name": "Body / Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"username\": \"user2\", \"channel\":\"mychannel\", \"smartcontract\":\"mycc\", \"args\":{\"sensorID\": \"sensor2\"} }",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"content-type\":\"application/json\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 500,
+        "wires": [
+            [
+                "ea8e7d7f1eb49cac"
+            ]
+        ]
+    },
+    {
+        "id": "bf0c3e3f55de6ceb",
+        "type": "debug",
+        "z": "cac464ba.946338",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 770,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ec2610afc4fa964a",
+        "type": "debug",
+        "z": "cac464ba.946338",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 770,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "3686977975faf9d2",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "15",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "7f957554ad37aef8"
+            ]
+        ]
+    },
+    {
+        "id": "94287f36e40157e9",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Generate Temperature Readings",
+        "func": "if( msg.payload === false ) {\n    return null;\n}\nmsg.payload = \"\" + Math.round(Math.random()*50) ;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 200,
+        "wires": [
+            [
+                "ecf0a73c0a6820f3"
+            ]
+        ]
+    },
+    {
+        "id": "ecf0a73c0a6820f3",
+        "type": "link out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "links": [
+            "2a5070ad2fb1f39a"
+        ],
+        "x": 935,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "2a5070ad2fb1f39a",
+        "type": "link in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "links": [
+            "ecf0a73c0a6820f3"
+        ],
+        "x": 55,
+        "y": 320,
+        "wires": [
+            [
+                "f5ca8274d203c157",
+                "1940ae176f396d2d",
+                "45c0acf1d8442127"
+            ]
+        ]
+    },
+    {
+        "id": "7f957554ad37aef8",
+        "type": "ui_switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "Generate IoT readings 2",
+        "tooltip": "",
+        "group": "d347e8e2.369048",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": true,
+        "className": "",
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "2244e5909548ab4b"
+            ]
+        ]
+    },
+    {
+        "id": "1940ae176f396d2d",
+        "type": "ui_gauge",
+        "z": "f6f2187d.f17ca8",
+        "name": "Gauge",
+        "group": "1f3af4f4790909eb",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "",
+        "label": "°",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "className": "",
+        "x": 230,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "f5ca8274d203c157",
+        "type": "ui_chart",
+        "z": "f6f2187d.f17ca8",
+        "name": "Chart",
+        "group": "1f3af4f4790909eb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature Generator",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "Querying Entropy",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "1",
+        "removeOlderPoints": "5",
+        "removeOlderUnit": "60",
+        "cutout": "",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 230,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45c0acf1d8442127",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Body / Headers",
+        "func": "var temp = msg.payload;\n\nvar date = new Date();\nvar options = { timeZone: 'Asia/Ho_Chi_Minh', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };\nvar time = date.toLocaleDateString('tr-TR', options);\n\n\nmsg.payload = {'username':'user2','channel':'mychannel', 'smartcontract':'mycc', 'args': {'sensorID':'sensor2', 'temp':temp,'time':time} };\nmsg.headers = {'content-type':'application/json'};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "ccc93691d3cdb09d"
+            ]
+        ]
+    },
+    {
+        "id": "fe13d17ada7ff9d0",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "x": 770,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "ccc93691d3cdb09d",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "Add Temperature HTTP Request",
+        "method": "POST",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/addTemp",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 520,
+        "y": 280,
+        "wires": [
+            [
+                "fe13d17ada7ff9d0"
+            ]
+        ]
+    },
+    {
+        "id": "2244e5909548ab4b",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "Rate Limit",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "5",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "94287f36e40157e9"
+            ]
+        ]
+    },
+    {
+        "id": "4114c761667d113f",
+        "type": "http request",
+        "z": "f6f2187d.f17ca8",
+        "name": "Get History HTTP Request",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://192.168.100.14:3000/api/getHistory",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 520,
+        "y": 460,
+        "wires": [
+            [
+                "ea402ec216d37d7e",
+                "76ef8e838c08c334"
+            ]
+        ]
+    },
+    {
+        "id": "ea402ec216d37d7e",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 730,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ba43a14f00abe65c",
+        "type": "ui_button",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "group": "83af9307f26bf0ad",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Get History",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 90,
+        "y": 460,
+        "wires": [
+            [
+                "6bc1ae7fd40ae14d"
+            ]
+        ]
+    },
+    {
+        "id": "76ef8e838c08c334",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Format Table",
+        "func": "if( msg.payload.length === 0 ) {\n    return;\n}\n\nvar TxChain = [];\nfor( i=0; i < msg.payload.length; i++ ) {\n    var TransactionRecord = { \"TxId\":msg.payload[i].TxId, \n                              \"sensorID\":msg.payload[i].Value.sensorID,\n                              \"temp\":msg.payload[i].Value.temp,\n                              \"time\":msg.payload[i].Value.time\n                            };\n    TxChain.push( TransactionRecord );    \n}\nmsg.payload = TxChain;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 440,
+        "wires": [
+            [
+                "b945f58eb754a4ce"
+            ]
+        ]
+    },
+    {
+        "id": "6bc1ae7fd40ae14d",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "Body / Headers",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"username\": \"user2\", \"channel\":\"mychannel\", \"smartcontract\":\"mycc\", \"args\":{\"sensorID\": \"sensor2\"} }",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "headers",
+                "pt": "msg",
+                "to": "{\"content-type\":\"application/json\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "4114c761667d113f"
+            ]
+        ]
+    },
+    {
+        "id": "b945f58eb754a4ce",
+        "type": "ui_table",
+        "z": "f6f2187d.f17ca8",
+        "group": "83af9307f26bf0ad",
+        "name": "",
+        "order": 2,
+        "width": "20",
+        "height": "14",
+        "columns": [
+            {
+                "field": "TxId",
+                "title": "Transaction ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "sensorID",
+                "title": "Sensor ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "time",
+                "title": "Time",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "temp",
+                "title": "Temperature",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 910,
+        "y": 440,
+        "wires": []
+    }
+]
