@@ -22,7 +22,13 @@
 
 ## Demo 
 
-![alt text](picture-1.png)
+<br>
+<p align="center">
+  <img src="fabcarDemo.gif">
+</p>
+<br>
+
+![stopNode4](https://user-images.githubusercontent.com/10428517/71500886-de7a3380-281b-11ea-9843-1d47ba64b2c8.gif)
 
 <!--
 ## Installation
