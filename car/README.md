@@ -24,8 +24,6 @@
 
 ![alt text](picture-1.png)
 
-![alt text](picture-2.png)
-
 <!--
 ## Installation
 [Step 1](https://kctheservant.medium.com/multi-host-setup-with-raft-based-ordering-service-29730788b171) 
