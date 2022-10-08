@@ -20,11 +20,18 @@
 
 `docker ps --format "table{{.ID}}\t{{.Names}}\t{{.Ports}}\t{{.RunningFor}}"`
 
+## Demo 
+
+![alt text](picture-1.png)
+
+![alt text](picture-2.png)
+
 <!--
 ## Installation
 [Step 1](https://kctheservant.medium.com/multi-host-setup-with-raft-based-ordering-service-29730788b171) 
 
 [Step 2](https://kctheservant.medium.com/multi-host-deployment-for-first-network-hyperledger-fabric-v2-273b794ff3d)
 -->
+`
 ## License
 MIT
